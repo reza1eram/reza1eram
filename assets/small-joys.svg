@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fde2e4"/>
+      <stop offset="0.55" stop-color="#e0f2fe"/>
+      <stop offset="1" stop-color="#ecfccb"/>
+    </linearGradient>
+    <style>
+      .cloud { animation: cloud 40s linear infinite; }
+      .c2 { animation-duration: 55s; animation-delay: -20s; }
+      @keyframes cloud { from { transform: translateX(-250px); } to { transform: translateX(1300px); } }
+      .sun { transform-origin: 1060px 70px; animation: spin 30s linear infinite; }
+      @keyframes spin { to { transform: rotate(360deg); } }
+      .wing { transform-box: fill-box; transform-origin: center; animation: flap .3s ease-in-out infinite alternate; }
+      @keyframes flap { from { transform: scaleX(1); } to { transform: scaleX(.2); } }
+      .b1 { animation: path1 14s ease-in-out infinite; }
+      .b2 { animation: path2 17s ease-in-out infinite; }
+      .b3 { animation: path1 19s ease-in-out infinite reverse; }
+      @keyframes path1 { 0%,100% { transform: translate(0,0); } 25% { transform: translate(120px,-40px); } 50% { transform: translate(220px,10px); } 75% { transform: translate(90px,35px); } }
+      @keyframes path2 { 0%,100% { transform: translate(0,0); } 30% { transform: translate(-140px,-30px); } 60% { transform: translate(-60px,30px); } }
+      .pigeons { animation: birds 22s linear infinite; }
+      @keyframes birds { from { transform: translate(-200px,0); } to { transform: translate(1400px,-60px); } }
+      .pw { transform-box: fill-box; transform-origin: bottom; animation: pflap .45s ease-in-out infinite alternate; }
+      @keyframes pflap { from { transform: scaleY(1); } to { transform: scaleY(-.6); } }
+      .leaf { animation: fall 7s ease-in infinite; }
+      .l2 { animation-delay: -2.5s; animation-duration: 8s; } .l3 { animation-delay: -5s; animation-duration: 9s; }
+      @keyframes fall { 0% { transform: translate(0,0) rotate(0); opacity: 0; } 10% { opacity: 1; } 100% { transform: translate(70px,200px) rotate(320deg); opacity: 0; } }
+      .tail { transform-origin: 845px 318px; animation: tail 1.6s ease-in-out infinite alternate; }
+      @keyframes tail { from { transform: rotate(-12deg); } to { transform: rotate(14deg); } }
+      .sway { transform-box: fill-box; transform-origin: bottom; animation: sway 3.5s ease-in-out infinite alternate; }
+      .s2 { animation-delay: -1.2s; } .s3 { animation-delay: -2.3s; }
+      @keyframes sway { from { transform: rotate(-4deg); } to { transform: rotate(4deg); } }
+      .heart { animation: rise 4s ease-out infinite; }
+      .h2 { animation-delay: -1.3s; } .h3 { animation-delay: -2.6s; }
+      @keyframes rise { 0% { transform: translateY(0) scale(.6); opacity: 0; } 20% { opacity: 1; } 100% { transform: translateY(-70px) scale(1.1); opacity: 0; } }
+      .cap { font: 600 20px 'Segoe UI', Arial, sans-serif; fill: #475569; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="380" rx="22" fill="url(#sky)"/>
+
+  <!-- sun -->
+  <g class="sun">
+    <g stroke="#fbbf24" stroke-width="4" stroke-linecap="round">
+      <line x1="1060" y1="22" x2="1060" y2="8"/><line x1="1060" y1="118" x2="1060" y2="132"/>
+      <line x1="1012" y1="70" x2="998" y2="70"/><line x1="1108" y1="70" x2="1122" y2="70"/>
+      <line x1="1026" y1="36" x2="1016" y2="26"/><line x1="1094" y1="104" x2="1104" y2="114"/>
+      <line x1="1094" y1="36" x2="1104" y2="26"/><line x1="1026" y1="104" x2="1016" y2="114"/>
+    </g>
+  </g>
+  <circle cx="1060" cy="70" r="36" fill="#fcd34d"/>
+
+  <!-- clouds -->
+  <g class="cloud" fill="#ffffff" opacity=".9">
+    <ellipse cx="100" cy="70" rx="55" ry="20"/><ellipse cx="135" cy="58" rx="35" ry="22"/><ellipse cx="80" cy="60" rx="28" ry="18"/>
+  </g>
+  <g class="cloud c2" fill="#ffffff" opacity=".8">
+    <ellipse cx="100" cy="120" rx="45" ry="16"/><ellipse cx="128" cy="110" rx="28" ry="17"/>
+  </g>
+
+  <!-- pigeons -->
+  <g class="pigeons">
+    <g transform="translate(0,95)">
+      <ellipse cx="0" cy="0" rx="16" ry="7" fill="#94a3b8"/><circle cx="15" cy="-4" r="5" fill="#94a3b8"/>
+      <path d="M19 -4 l6 1 l-6 2z" fill="#f59e0b"/>
+      <path class="pw" d="M-6 -4 Q2 -24 12 -4z" fill="#cbd5e1"/>
+    </g>
+    <g transform="translate(-60,125) scale(.8)">
+      <ellipse cx="0" cy="0" rx="16" ry="7" fill="#a1a1aa"/><circle cx="15" cy="-4" r="5" fill="#a1a1aa"/>
+      <path d="M19 -4 l6 1 l-6 2z" fill="#f59e0b"/>
+      <path class="pw" d="M-6 -4 Q2 -24 12 -4z" fill="#e4e4e7"/>
+    </g>
+  </g>
+
+  <!-- ground -->
+  <path d="M0 330 Q300 300 600 325 T1200 320 V380 H0 Z" fill="#bbf7d0"/>
+  <path d="M0 350 Q300 330 600 350 T1200 345 V380 H0 Z" fill="#86efac"/>
+
+  <!-- tree -->
+  <rect x="145" y="190" width="26" height="140" rx="8" fill="#92400e"/>
+  <path d="M158 250 l-34 -30" stroke="#92400e" stroke-width="9" stroke-linecap="round"/>
+  <g class="sway">
+    <circle cx="158" cy="150" r="70" fill="#4ade80"/>
+    <circle cx="110" cy="185" r="45" fill="#22c55e"/>
+    <circle cx="205" cy="180" r="50" fill="#16a34a"/>
+    <circle cx="160" cy="105" r="45" fill="#86efac"/>
+    <circle cx="130" cy="140" r="7" fill="#f472b6"/><circle cx="190" cy="125" r="7" fill="#f472b6"/><circle cx="175" cy="190" r="7" fill="#fb7185"/>
+  </g>
+  <ellipse class="leaf" cx="210" cy="170" rx="9" ry="4" fill="#65a30d"/>
+  <ellipse class="leaf l2" cx="120" cy="190" rx="9" ry="4" fill="#ca8a04"/>
+  <ellipse class="leaf l3" cx="170" cy="200" rx="9" ry="4" fill="#84cc16"/>
+
+  <!-- flower pots -->
+  <g transform="translate(330,240)">
+    <g class="sway">
+      <path d="M40 75 C40 45 38 30 30 10" stroke="#16a34a" stroke-width="4" fill="none"/>
+      <ellipse cx="25" cy="45" rx="12" ry="5" fill="#22c55e" transform="rotate(-30 25 45)"/>
+      <g transform="translate(30,10)"><circle r="9" cx="0" cy="-10" fill="#f472b6"/><circle r="9" cx="10" cy="0" fill="#f472b6"/><circle r="9" cx="0" cy="10" fill="#f472b6"/><circle r="9" cx="-10" cy="0" fill="#f472b6"/><circle r="6" fill="#fde047"/></g>
+    </g>
+    <path d="M10 75 h60 l-8 50 h-44 z" fill="#ea580c"/><rect x="5" y="70" width="70" height="12" rx="4" fill="#f97316"/>
+  </g>
+  <g transform="translate(430,255)">
+    <g class="sway s2">
+      <path d="M35 60 C35 40 40 25 48 8" stroke="#16a34a" stroke-width="4" fill="none"/>
+      <path d="M35 60 C33 42 25 30 18 20" stroke="#16a34a" stroke-width="4" fill="none"/>
+      <g transform="translate(48,8)"><circle r="8" cx="0" cy="-8" fill="#a78bfa"/><circle r="8" cx="8" cy="0" fill="#a78bfa"/><circle r="8" cx="0" cy="8" fill="#a78bfa"/><circle r="8" cx="-8" cy="0" fill="#a78bfa"/><circle r="5" fill="#fef08a"/></g>
+      <g transform="translate(18,20)"><circle r="7" cx="0" cy="-7" fill="#fb7185"/><circle r="7" cx="7" cy="0" fill="#fb7185"/><circle r="7" cx="0" cy="7" fill="#fb7185"/><circle r="7" cx="-7" cy="0" fill="#fb7185"/><circle r="4" fill="#fef08a"/></g>
+    </g>
+    <path d="M8 60 h56 l-7 45 h-42 z" fill="#0e7490"/><rect x="4" y="56" width="64" height="11" rx="4" fill="#0891b2"/>
+  </g>
+  <g transform="translate(525,265)">
+    <g class="sway s3">
+      <path d="M30 50 C28 30 30 15 30 0" stroke="#15803d" stroke-width="4" fill="none"/>
+      <ellipse cx="18" cy="22" rx="13" ry="6" fill="#4ade80" transform="rotate(-35 18 22)"/>
+      <ellipse cx="42" cy="14" rx="13" ry="6" fill="#22c55e" transform="rotate(35 42 14)"/>
+      <ellipse cx="30" cy="-2" rx="6" ry="10" fill="#86efac"/>
+    </g>
+    <path d="M6 50 h48 l-6 40 h-36 z" fill="#b45309"/><rect x="2" y="46" width="56" height="10" rx="4" fill="#d97706"/>
+  </g>
+
+  <!-- butterflies -->
+  <g class="b1"><g transform="translate(300,170)">
+    <ellipse class="wing" cx="-9" cy="0" rx="10" ry="13" fill="#f9a8d4"/><ellipse class="wing" cx="9" cy="0" rx="10" ry="13" fill="#f472b6"/>
+    <rect x="-1.5" y="-9" width="3" height="18" rx="1.5" fill="#334155"/></g></g>
+  <g class="b2"><g transform="translate(700,150)">
+    <ellipse class="wing" cx="-8" cy="0" rx="9" ry="12" fill="#fde047"/><ellipse class="wing" cx="8" cy="0" rx="9" ry="12" fill="#fbbf24"/>
+    <rect x="-1.5" y="-8" width="3" height="16" rx="1.5" fill="#334155"/></g></g>
+  <g class="b3"><g transform="translate(500,120)">
+    <ellipse class="wing" cx="-8" cy="0" rx="9" ry="12" fill="#a5f3fc"/><ellipse class="wing" cx="8" cy="0" rx="9" ry="12" fill="#67e8f9"/>
+    <rect x="-1.5" y="-8" width="3" height="16" rx="1.5" fill="#334155"/></g></g>
+
+  <!-- kitten -->
+  <g>
+    <path class="tail" d="M845 318 C885 318 900 290 890 268" stroke="#fb923c" stroke-width="10" fill="none" stroke-linecap="round"/>
+    <ellipse cx="820" cy="305" rx="38" ry="30" fill="#fdba74"/>
+    <circle cx="800" cy="265" r="27" fill="#fdba74"/>
+    <path d="M778 250 l2 -26 l18 16z" fill="#fdba74"/><path d="M822 250 l-2 -26 l-18 16z" fill="#fdba74"/>
+    <path d="M782 247 l1 -14 l9 9z" fill="#fda4af"/><path d="M818 247 l-1 -14 l-9 9z" fill="#fda4af"/>
+    <circle cx="791" cy="263" r="3.5" fill="#1e293b"/><circle cx="809" cy="263" r="3.5" fill="#1e293b"/>
+    <circle cx="792" cy="262" r="1.2" fill="#fff"/><circle cx="810" cy="262" r="1.2" fill="#fff"/>
+    <path d="M797 271 l3 3 l3 -3z" fill="#fb7185"/>
+    <path d="M800 274 q-4 5 -8 2 M800 274 q4 5 8 2" stroke="#9a3412" stroke-width="1.5" fill="none"/>
+    <g stroke="#9a3412" stroke-width="1"><line x1="786" y1="272" x2="770" y2="269"/><line x1="786" y1="275" x2="770" y2="277"/><line x1="814" y1="272" x2="830" y2="269"/><line x1="814" y1="275" x2="830" y2="277"/></g>
+    <ellipse cx="800" cy="333" rx="10" ry="6" fill="#fed7aa"/><ellipse cx="830" cy="333" rx="10" ry="6" fill="#fed7aa"/>
+    <path d="M815 285 q8 8 0 16" stroke="#fb923c" stroke-width="4" fill="none" opacity=".6"/>
+  </g>
+
+  <!-- laughter / kids: ball and rising hearts -->
+  <g transform="translate(960,300)">
+    <circle cx="0" cy="18" r="20" fill="#f87171"/><path d="M-20 18 a20 20 0 0 0 40 0" fill="#60a5fa"/><path d="M-17 8 Q0 28 17 8" stroke="#fff" stroke-width="3" fill="none"/>
+  </g>
+  <g fill="#fb7185">
+    <path class="heart" d="M1030 300 c-6 -8 -18 -2 -12 8 l12 12 l12 -12 c6 -10 -6 -16 -12 -8z"/>
+    <path class="heart h2" d="M1070 290 c-5 -7 -15 -2 -10 7 l10 10 l10 -10 c5 -9 -5 -14 -10 -7z" fill="#f472b6"/>
+    <path class="heart h3" d="M1110 305 c-4 -6 -12 -1 -8 6 l8 8 l8 -8 c4 -7 -4 -12 -8 -6z" fill="#fda4af"/>
+  </g>
+
+  <text x="600" y="40" text-anchor="middle" class="cap">the small things that make life beautiful</text>
+</svg>
